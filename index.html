@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+
+  <body ng-app="myApp" >
+    <div ng-controller="myController" >
+        <p>Your First Name is : {{fName}} </p>
+        <p>Your Last Name is : {{lName}} </p>
+        <p>Your Full name is : {{fullname()}} </p>
+
+        <ul ng-repeat="data in myData" | style="background-color: aqua;">
+            <li  > Name : {{data.name}}  </li>
+            <li  > Age : {{data.age}}  </li>
+            <li  > Position : {{data.position}}  </li>
+        </ul>
+    </div>
+
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
