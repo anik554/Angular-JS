@@ -7,8 +7,8 @@
     <title>Document</title>
   </head>
 
-  <body ng-app="myApp" >
-    <div ng-controller="myController" >
+  <body>
+    <!-- <div ng-app="myApp" ng-controller="myController" >
         <p>Your First Name is : {{fName}} </p>
         <p>Your Last Name is : {{lName}} </p>
         <p>Your Full name is : {{fullname()}} </p>
@@ -18,8 +18,37 @@
             <li  > Age : {{data.age}}  </li>
             <li  > Position : {{data.position}}  </li>
         </ul>
+    </div> -->
+
+    <!-- <div ng-app="myApps2" ng-controller="buttonController" ng-init="ad=0" >
+        <button ng-click="addNumber();" ng-disabled= "addNumberdisable" >increment</button> 
+        <button ng-click="subNumber();" ng-disabled= "subNumberdisable">decrement</button>
+        <h1>{{count}}</h1>
+        <p>Count Value is: {{count}} </p>
+    </div> -->
+
+    <div ng-app="formApp" ng-controller="formControl">
+        
+      <div ng-repeat="review in reviews" style="background-color: aqua">
+        <p>Comment : {{review.comment}}</p>
+        <p>Author : {{review.by}}</p>
+
+        <p>{{comment}}</p>
+      </div>
+
+      <form ng-submit="adreview()" >
+        <label>Comment</label>
+        <input type="text" ng-model="form.comment" /> <br />
+        <br />
+        <label>Author</label>
+        <input type="text" ng-model="form.by" />
+        <button type="submit">Add Post</button>
+      </form>
+
     </div>
 
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <!-- <script src="button.js"></script> -->
+    <script src="form.js"></script>
   </body>
 </html>
